@@ -1,0 +1,16 @@
+<main>
+    <div class="container">
+        {{#if err}}
+        {{err}}
+        {{/if}}
+
+        <h1 class="display-1 text-center"> Event List</h1>
+
+        {{#each data}}
+        <h1 class="display-2"><a href="/event/{{this.EventName}}">{{this.EventName}}</a></h1>
+    
+        {{/each}}
+        
+    </div>
+
+</main>

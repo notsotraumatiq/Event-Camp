@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- USERPIC -->
+				<div class="profile-userpic">
+					<img src="https://static.change.org/profile-img/default-user-profile.svg" class="img-responsive" alt="">
+				</div>
+
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						<h1 class="display-4 text-center">{{data.UserName}}</h1> 
+					</div>
+				</div>
+
+
+				
+					<center><ul class="list-unstyled">
+						<li>
+							<a href="/userevents">
+							My Events </a>
+						</li>
+						<li>
+							<a href="/uservolunteering">
+							Volunteering </a>
+						</li>
+					</ul></center>
+	
+				
+			</div>
+		</div>
+
+		<div class="col-md-9">
+					<h2 class="display-1 text-center">Update Information</h2>
+
+            <div class="profile-content">
+
+							 	{{#if err}}
+        					{{err}}
+        				{{/if}}
+							<form method='post', action='/updateUser',enctype='multipart/form-data'> 
+
+								<div class="form-group row">
+        				<label for="fname" class="col-sm-2 col-form-label"> First Name  </label> 
+								<div class="col-sm-10">
+        				<input type="textbox" name="fname" id="fname" value={{data.FirstName}} class="form-control"><br>
+								</div></div>
+
+								<div class="form-group row">
+        				<label for="lname" class="col-sm-2 col-form-label"> Last Name  </label> 
+								<div class="col-sm-10">
+        				<input type="textbox" name="lname" id="lname" value={{data.LastName}} class="form-control"><br>
+								</div></div>
+
+								<div class="form-group row">
+        				<label for="email" class="col-sm-2 col-form-label"> Email  </label> 
+								<div class="col-sm-10">
+        				<input type="email" name="email" id="email" value={{data.email}} class="form-control"><br>
+								</div></div>
+
+								<div class="form-group row">
+        				<label for="uname" class="col-sm-2 col-form-label"> User Name  </label> 
+								<div class="col-sm-10">
+        				<label for="uname" name="uname" id="uname" class="col-sm-2 col-form-label"> {{data.UserName}} </label><br>
+								</div></div>
+
+								<div class="form-group row">
+        				<label for="uname" class="col-sm-2 col-form-label"> Brownie Points  </label> 
+								<div class="col-sm-10">
+        				<label for="uname" name="uname" id="uname" class="col-sm-2 col-form-label"> {{brownie.Brownie}} </label><br>
+								</div></div>
+
+        				<div class="form-group row">
+        				<label for="dob" class="col-sm-2 col-form-label" class="form-control"> Date of Birth  </label> 
+								<div class="col-sm-10">
+        				<input type="date" name="dob" id="dob" value={{data.DOB}} class="form-control"><br>
+								</div></div>
+
+								<div class="form-group row">
+        				<label for="pnumber" class="col-sm-2 col-form-label"> Phone number  </label> 
+								<div class="col-sm-10">
+        				<input type="textbox" name="pnumber" id="pnumber" value={{data.PhoneNumber}} class="form-control"><br>	
+								</div></div>
+
+								<center><input type="submit" value="Update" /></center>
+							</form>
+						
+            </div>
+		</div>
+	</div>
+</div>
+<center>
+<strong> <a href="" target="_blank"></a></strong>
+</center>
+<br>
+<br>

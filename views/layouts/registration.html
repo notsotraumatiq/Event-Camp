@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Recepie Finder</title>
+    <link rel="stylesheet" type="text/css" href="public/style.css">
+</head>
+
+<header class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">Login</a>
+  <a href="#contact">Register</a>
+  <a href="#about">About</a>
+</header>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+<main>
+    <h2>Register</h2>
+    <p>Please register using the form below to add details</p>
+    {{#if err}}
+    {{#each err}}
+    {{err}}
+    {{/each}}
+    {{/if}}
+
+    <form method='post', action='/register',enctype='multipart/form-data'> 
+        <label for="fname"> First Name  </label> 
+        <input type="textbox" name="fname" id="fname" placeholder='Enter First Name'><br>
+
+        <label for="lname"> Last Name  </label> 
+        <input type="textbox" name="lname" id="lname" placeholder='Enter Last Name'><br>
+
+        <label for="email"> Email  </label> 
+        <input type="email" name="email" id="email" placeholder='Enter your email addrrss'><br>
+
+        <label for="uname"> User Name  </label> 
+        <input type="textbox" name="uname" id="uname" placeholder='Enter User Name'><br>
+
+        <label for="password"> Password  </label> 
+        <input type="textbox" name="password" id="passsword" placeholder='Enter Password'><br>
+
+        <label for="cpassword"> Confirm Password  </label> 
+        <input type="textbox" name="cpassword" id="cpasssword" placeholder='Confirm Password'><br>
+
+        <label for="dob"> Date of Birth  </label> 
+        <input type="textbox" name="dob" id="dob" placeholder='Enter Date of birth'><br>
+
+        <label for="pnumber"> Phone number  </label> 
+        <input type="textbox" name="pnumber" id="pnumber" placeholder='Enter Phone Number'><br>
+
+        <input type="submit" value="Register" />
+
+    </form>
+
+</main> 
+
+</body>
+
+</html>

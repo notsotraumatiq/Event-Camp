@@ -1,0 +1,18 @@
+<main>
+    <div class="container">
+        {{#if err}}
+        {{err}}
+        {{/if}}
+
+        <h1 class="display-1 text-center"> Events Listed</h1>
+
+        {{#each data}}
+        <h1 class="display-2"><a href="/people/{{this._id}}">{{this.EventName}}</a></h1>
+        <!--<h1><a href="http://www.google.com">{{this.EventName}}</a></h1>-->
+        <h4 class="display-5"><p>Date: {{this.DateofEvent}}</p></h4>
+        <h4 class="display-5"><p> Description: {{this.Description}} </p></h4>
+        {{/each}}
+        
+    </div>
+
+</main>

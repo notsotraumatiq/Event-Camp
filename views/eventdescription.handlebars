@@ -1,0 +1,45 @@
+<main>
+<div class="container">
+        {{#if err}}
+        {{err}}
+        {{/if}}
+
+        <h1 class="display-1 text-center"> Details of Event</h1>
+
+        <form method='post', action='/rsvpuser',enctype='multipart/form-data'>
+        
+            <label for="fname"> <h3> Event name:  </label> 
+            <label for="fname"> {{data.EventName}} </h3> </label> <br>
+
+            <label for="fname"> <h3> Description:  </label> 
+            <label for="fname"> {{data.Description}} </h3> </label> <br>
+
+            <label for="fname"> <h3> Location:  </label> 
+            <label for="fname"> {{data.Location}} </h3> </label> <br>
+
+            <label for="fname"> <h3> Category:  </label>
+            <label for="fname"> {{data.Category}} </h3>  </label>  <br>
+
+            <label for="fname"> <h3> Date of Event:  </label> 
+            <label for="fname"> {{data.DateofEvent}} </h3> </label> <br>
+
+            <input type="submit" value="RSVP" />
+        </form>
+
+        <h1>Comments</h1>
+        {{#each comment}}
+        <h2>User: {{this.UserName}}</h2>
+        <h2>Comment: {{this.comment}}</h2>
+        {{/each}}
+
+        <form method='post', action='/eventdetail',enctype='multipart/form-data'>
+        
+        <label for="fname"> Add a comment  </label> 
+        <input type="textbox" name="comment" id="comment" placeholder='Enter Your comment'><br>
+
+        <input type="submit" value="Submit" />
+
+        </form>
+        
+</div>
+</main>
